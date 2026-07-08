@@ -17,7 +17,7 @@ async function dbConnect() {
   if (cached.conn) return cached.conn;
 
   if (!cached.promise) {
-    cached.promise = mongoose.connect(MONGODB_URI!).then((mongoose) => {
+    cached.promise = mongoose.connect(MONGODB_URI!, { family: 4 } as any).then((mongoose) => {
       return mongoose;
     });
   }
