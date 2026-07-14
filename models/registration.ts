@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { getModel } from "../lib/mongodb";
 
 const RegistrationSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -15,5 +16,4 @@ const RegistrationSchema = new mongoose.Schema({
 
 RegistrationSchema.index({ email: 1, eventId: 1 }, { unique: true });
 
-export default mongoose.models.Registration ||
-  mongoose.model("Registration", RegistrationSchema);
+export default getModel("Registration", RegistrationSchema);

@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local fallback database and scratch files
+/lib/mock-db.json
+/scratch/
+/Password.txt

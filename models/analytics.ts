@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { getModel } from "../lib/mongodb";
 
 const AnalyticsSchema = new mongoose.Schema({
   action: { type: String, required: true },
@@ -8,4 +9,4 @@ const AnalyticsSchema = new mongoose.Schema({
   ip: String,
 });
 
-export default mongoose.models.Analytics || mongoose.model("Analytics", AnalyticsSchema);
+export default getModel("Analytics", AnalyticsSchema);

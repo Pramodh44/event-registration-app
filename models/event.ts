@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { getModel } from "../lib/mongodb";
 
 const EventSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -10,4 +11,4 @@ const EventSchema = new mongoose.Schema({
   registeredCount: { type: Number, default: 0 },
 });
 
-export default mongoose.models.Event || mongoose.model("Event", EventSchema);
+export default getModel("Event", EventSchema);

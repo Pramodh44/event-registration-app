@@ -1,5 +1,7 @@
 # EventSphere - Full-Stack Event Registration Application
 
+![EventSphere Banner](eventsphere_thumbnail.png)
+
 EventSphere is a premium, full-stack event registration portal built with **Next.js 16 (App Router)**, **MongoDB (Mongoose)**, and **Tailwind CSS v4**. It features high-fidelity glassmorphism designs, robust validation safeguards, search debouncing, dual-strategy filtering, operational metrics dashboard, and database-backed event tracking.
 
 ---
